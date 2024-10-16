@@ -2,7 +2,7 @@ import jwt
 import time
 import requests
 
-DEFAULT_REGION = 'eu-west-2'
+DEFAULT_REGION = 'us-east-1'
 ESCALATION_TEAM_NAME = 'can-escalate-to-become-an-owner'
 ELEVATION_BOT = 'elevatemetoowner[bot]'
 

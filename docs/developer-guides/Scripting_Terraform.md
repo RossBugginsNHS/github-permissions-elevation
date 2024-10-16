@@ -69,7 +69,7 @@ Open the file `infrastructure/modules/private_s3_bucket/main.tf`, and put this i
 ```terraform
 # Define the provider
 provider "aws" {
-  region = "eu-west-2"
+  region = "us-east-1"
 }
 
 variable "bucket_name" {

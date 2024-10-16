@@ -115,9 +115,9 @@ def test_initialise_aws_clients(github_permission_manager):
     with patch('boto3.resource') as mock_resource, \
         patch('boto3.client') as mock_client:
         github_permission_manager.initialise_aws_clients()
-        mock_resource.assert_called_once_with('dynamodb', region_name='eu-west-2')
-        mock_client.assert_any_call('stepfunctions', region_name='eu-west-2')
-        mock_client.assert_any_call('ssm', region_name='eu-west-2')
+        mock_resource.assert_called_once_with('dynamodb', region_name='us-east-1')
+        mock_client.assert_any_call('stepfunctions', region_name='us-east-1')
+        mock_client.assert_any_call('ssm', region_name='us-east-1')
 
 def test_get_all_parameters(github_permission_manager):
     with patch.dict('os.environ', {'WORKSPACE': 'workspace'}), \
